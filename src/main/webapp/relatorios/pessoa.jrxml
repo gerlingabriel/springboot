@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pessoa" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="448469d8-215b-4872-a84a-a67c9b1d6adb">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Projeto SptringBoot"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="uf" class="java.lang.String">
+		<fieldDescription><![CDATA[uf]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[cidade]]></fieldDescription>
+	</field>
+	<field name="complemento" class="java.lang.String">
+		<fieldDescription><![CDATA[complemento]]></fieldDescription>
+	</field>
+	<field name="bairro" class="java.lang.String">
+		<fieldDescription><![CDATA[bairro]]></fieldDescription>
+	</field>
+	<field name="salario" class="java.lang.Double">
+		<fieldDescription><![CDATA[salario]]></fieldDescription>
+	</field>
+	<field name="nome_1" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.Character">
+		<fieldDescription><![CDATA[sexo]]></fieldDescription>
+	</field>
+	<field name="telefones" class="java.util.List">
+		<fieldDescription><![CDATA[telefones]]></fieldDescription>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<fieldDescription><![CDATA[cep]]></fieldDescription>
+	</field>
+	<field name="rua" class="java.lang.String">
+		<fieldDescription><![CDATA[rua]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="280" height="45" uuid="a85fafc5-5edb-414d-839f-e15089eb7a77"/>
+				<textElement textAlignment="Left">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Relatório de Salarial]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="30" uuid="2c246a64-b622-4488-88df-9ef19203cfac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9d22e37-91a1-4ce4-84bb-df7a1bc5bf23"/>
+				</reportElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="20" width="220" height="30" uuid="2e784b16-624a-4d79-a7b7-6d77eef5d41e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71a3d335-260e-4627-af1a-894ce1389736"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="20" width="160" height="30" uuid="33d05424-d8b0-4104-b321-0db0a70a71bc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e9f1bbf-00ba-4618-aa93-1aaaef335d04"/>
+				</reportElement>
+				<text><![CDATA[Salário]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="6fd5e675-33e9-45ec-93e4-875dd22fbc16">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9d22e37-91a1-4ce4-84bb-df7a1bc5bf23"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="220" height="20" uuid="91668c28-e4fd-42dd-8071-99cacc405e4b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71a3d335-260e-4627-af1a-894ce1389736"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="160" height="20" uuid="acc5ef14-f242-4ac9-96fc-14bfe9f35429">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e9f1bbf-00ba-4618-aa93-1aaaef335d04"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="20" width="100" height="30" uuid="1f877e30-d78e-4fa7-9723-283901026303"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
